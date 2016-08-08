@@ -105,7 +105,7 @@
 				});
 				$('#module-info').show();
 				var new_img = $(this).attr('src');
-				$('.img-logo').fadeTo('slow', 0, function(){
+				$('.img-logo').fadeTo('fast', 0, function(){
 					change_img(new_img);
 				});
 				$('.img-logo').fadeTo('slow', 1)
@@ -122,7 +122,7 @@
 				modules.forEach(function(item, index){
 					$('#'+item).show(500);
 				});
-				$('.img-logo').fadeTo('slow', 0, function(){
+				$('.img-logo').fadeTo('fast', 0, function(){
 					var new_img = 'img/odoomx.png';
 					$('.img-logo').attr('src', new_img);
 				});
