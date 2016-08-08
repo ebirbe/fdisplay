@@ -90,6 +90,7 @@
 			'reports',
 			'warehouse'
 		];
+		var def_logo = 'img/odoomx.png';
 		function change_img(new_img){
 			$('.img-logo').attr('src', new_img);
 		}
@@ -118,12 +119,14 @@
 			$('.img-logo')
 				.click(function(){
 					$('.img-module').show(500);
-					var new_img = $(this).attr('src');
-					$('.img-logo').fadeTo('fast', 0, function(){
-						$('.img-logo').attr('src', new_img);
-					});
-					$('#module-info').hide();
-					$('.img-logo').fadeTo('slow', 1);
+					current_img = $('.img-logo').attr('src');
+					if(current_img != def_logo){
+						$('.img-logo').fadeTo('fast', 0, function(){
+							$('.img-logo').attr('src', def_logo);
+						});
+						$('#module-info').hide();
+						$('.img-logo').fadeTo('slow', 1);
+					}
 				});
 		});
 	</script>
