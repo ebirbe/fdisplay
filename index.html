@@ -79,10 +79,18 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- JQuery UI -->
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 	<script type="text/javascript">
+		function change_img(new_img){
+			console.log(new_img);
+			$('.img-logo').attr('src', new_img);
+		}
 		$(document).ready(function(){
 			$('#module-info').hide();
 			$('.viewport').height($(window).height());
+			$('.img-module').mouseover(function(){
+			});
 			$('.img-module').click(function(){
 				var modules = [
 					'sales',
@@ -96,6 +104,11 @@
 					$('#'+item).hide(500);
 				});
 				$('#module-info').show();
+				var new_img = $(this).attr('src');
+				$('.img-logo').fadeTo('slow', 0, function(){
+					change_img(new_img);
+				});
+				$('.img-logo').fadeTo('slow', 1)
 			});
 			$('.img-logo').click(function(){
 				var modules = [
@@ -109,7 +122,12 @@
 				modules.forEach(function(item, index){
 					$('#'+item).show(500);
 				});
+				$('.img-logo').fadeTo('slow', 0, function(){
+					var new_img = 'img/odoomx.png';
+					$('.img-logo').attr('src', new_img);
+				});
 				$('#module-info').hide();
+				$('.img-logo').fadeTo('slow', 1);
 			});
 		});
 	</script>
