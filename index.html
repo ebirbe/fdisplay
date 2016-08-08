@@ -82,53 +82,49 @@
 	<!-- JQuery UI -->
 	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 	<script type="text/javascript">
+		var modules = [
+			'sales',
+			'accounting',
+			'hr',
+			'documents',
+			'reports',
+			'warehouse'
+		];
 		function change_img(new_img){
-			console.log(new_img);
 			$('.img-logo').attr('src', new_img);
 		}
+
+		$('#module-info').hide();
+		$('.viewport').height($(window).height());
+
 		$(document).ready(function(){
-			$('#module-info').hide();
-			$('.viewport').height($(window).height());
-			$('.img-module').mouseover(function(){
-			});
-			$('.img-module').click(function(){
-				var modules = [
-					'sales',
-					'accounting',
-					'hr',
-					'documents',
-					'reports',
-					'warehouse'
-				];
-				modules.forEach(function(item, index){
-					$('#'+item).hide(500);
+			$('.img-module')
+				.mouseover(function(){
+					$('.img-module').parent().css('opacity', 0.1);
+					$(this).parent().css('opacity', 1);
+				})
+				.mouseout(function(){
+					$('.img-module').parent().css('opacity', 1);
+				})
+				.click(function(){
+					$('.img-module').hide(500);
+					$('#module-info').show();
+					var new_img = $(this).attr('src');
+					$('.img-logo').fadeTo('fast', 0, function(){
+						change_img(new_img);
+					});
+					$('.img-logo').fadeTo('slow', 1)
 				});
-				$('#module-info').show();
-				var new_img = $(this).attr('src');
-				$('.img-logo').fadeTo('fast', 0, function(){
-					change_img(new_img);
+			$('.img-logo')
+				.click(function(){
+					$('.img-module').show(500);
+					var new_img = $(this).attr('src');
+					$('.img-logo').fadeTo('fast', 0, function(){
+						$('.img-logo').attr('src', new_img);
+					});
+					$('#module-info').hide();
+					$('.img-logo').fadeTo('slow', 1);
 				});
-				$('.img-logo').fadeTo('slow', 1)
-			});
-			$('.img-logo').click(function(){
-				var modules = [
-					'sales',
-					'accounting',
-					'hr',
-					'documents',
-					'reports',
-					'warehouse'
-				];
-				modules.forEach(function(item, index){
-					$('#'+item).show(500);
-				});
-				$('.img-logo').fadeTo('fast', 0, function(){
-					var new_img = 'img/odoomx.png';
-					$('.img-logo').attr('src', new_img);
-				});
-				$('#module-info').hide();
-				$('.img-logo').fadeTo('slow', 1);
-			});
 		});
 	</script>
 </html>
