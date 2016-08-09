@@ -12,18 +12,18 @@
 		<style type="text/css">
 			.image-center { margin: 0 auto;}
 			.fullview {
-				overflow-y: auto;
-				height:100%;
+				//overflow-y: auto;
+				//height:100%;
 			}
-            .fd_row {
-                height:20%;
-            }
+			.fd_row {
+				margin-top:30px;
+			}
 			.img-module, .img-logo {
 				cursor: pointer;
 			}
-            .img-module {
-                font-size: 8em;
-            }
+			.img-module {
+				font-size: 8em;
+			}
 		</style>
 	</head>
 	<body>
@@ -33,15 +33,28 @@
 				<h1 class="text-center">Odoo L10n MX Modules</h1>
 -->
 				<!-- Diagram Row 1 -->
-                <div class="row">
+				<div class="fd_row"></div>
+				<div class="row fd_row">
 					<div class="col-xs-2 col-xs-offset-1 "></div>
 					<div class="col-xs-2 "></div>
 					<div class="col-xs-2" ><img class="img-logo img-responsive center-block" src="img/odoomx.png" alt="Odoo L10n MX Modules"></div>
 					<div class="col-xs-2 "></div>
 					<div class="col-xs-2 "></div>
 				</div>
+				<div id="module-info" class="row fd_row">
+					<div class="col-md-6">
+						<img class="img-responsive center-block" src="img/smile.jpg">
+					</div>
+					<div class="col-md-6">
+						<h2>Module Title</h2>
+						<span>Module subtitle</span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel nibh at sem suscipit suscipit non sit amet massa. Phasellus imperdiet neque eros, quis pulvinar magna volutpat a. Vestibulum lectus nibh, suscipit ac ullamcorper ut, faucibus nec justo. Sed vitae nulla vitae quam sagittis maximus ut ut tellus. Nullam viverra tincidunt lacus. Nam efficitur ultricies ex, ut tempor urna condimentum et. Suspendisse at mattis felis. Nulla aliquam est tempus massa consequat pellentesque sed et enim. Etiam est eros, hendrerit sed sagittis eget, condimentum laoreet lacus. Suspendisse tristique vulputate maximus. Ut facilisis turpis tellus, in molestie elit rutrum ut. Pellentesque eros quam, venenatis sit amet sem eu, fermentum scelerisque ipsum. Aenean ut nibh ac libero faucibus blandit quis non purus. Proin laoreet volutpat lorem a iaculis. Integer commodo, neque non faucibus viverra, sapien ligula faucibus metus, pellentesque cursus orci sapien tristique nibh. Etiam quis blandit enim, non porta arcu.</p>
+						<a href="#" class="btn btn-primary btn-lg center-block">Click here to see more</a>
+						<a href="#" class="btn btn-default btn-xs center-block fd_back">&lt; Go back</a>
+					</div>
+				</div>
 				<!-- Diagram Row 2 -->
-				<div class="row">
+				<div class="row fd_row">
 					<div class="col-xs-2 col-xs-offset-1 "><img id="sales" class="img-module img-responsive center-block" src="img/sales.png" alt="Sales"></div>
 					<div class="col-xs-2 "></div>
 					<div class="col-xs-2 "><img id="accounting" class="img-module img-responsive center-block" src="img/accounting.png" alt="Accounting"></div>
@@ -49,24 +62,16 @@
 					<div class="col-xs-2 "><img id="hr" class="img-module img-responsive center-block" src="img/hr.png" alt="Human Resources"></div>
 				</div>
 				<!-- Diagram Row 3 -->
-				<div class="row">
-					<div class="col-xs-2 col-xs-offset-1 "><img id="documents" class="img-module img-responsive center-block" src="img/documents.png" alt="Documents"></div>
+				<div class="row fd_row">
+					<div class="col-xs-2 col-xs-offset-1"><img id="documents" class="img-module img-responsive center-block" src="img/documents.png" alt="Documents"></div>
 					<div class="col-xs-2 "></div>
 					<div class="col-xs-2 "><img id="reports" class="img-module img-responsive center-block" src="img/reports.png" alt="Reports"></div>
 					<div class="col-xs-2 "></div>
 					<div class="col-xs-2 "><img id="warehouse" class="img-module img-responsive center-block" src="img/warehouse.png" alt="Warehouse"></div>
 				</div>
-				<div id="module-info" class="row">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel nibh at sem suscipit suscipit non sit amet massa. Phasellus imperdiet neque eros, quis pulvinar magna volutpat a. Vestibulum lectus nibh, suscipit ac ullamcorper ut, faucibus nec justo. Sed vitae nulla vitae quam sagittis maximus ut ut tellus. Nullam viverra tincidunt lacus. Nam efficitur ultricies ex, ut tempor urna condimentum et. Suspendisse at mattis felis. Nulla aliquam est tempus massa consequat pellentesque sed et enim. Etiam est eros, hendrerit sed sagittis eget, condimentum laoreet lacus. Suspendisse tristique vulputate maximus. Ut facilisis turpis tellus, in molestie elit rutrum ut. Pellentesque eros quam, venenatis sit amet sem eu, fermentum scelerisque ipsum. Aenean ut nibh ac libero faucibus blandit quis non purus. Proin laoreet volutpat lorem a iaculis. Integer commodo, neque non faucibus viverra, sapien ligula faucibus metus, pellentesque cursus orci sapien tristique nibh. Etiam quis blandit enim, non porta arcu.</p>
-					<p>Praesent rutrum est eget arcu ullamcorper porttitor. Ut eu laoreet odio, ac convallis enim. Phasellus maximus eu sem nec viverra. Fusce interdum lacinia ipsum, ut vehicula dui rutrum sed. Mauris sed facilisis neque. Vivamus tempus viverra est, ac tristique lacus luctus vel. Vestibulum venenatis, enim ac cursus posuere, eros ipsum lacinia lacus, eget efficitur ligula mauris dignissim massa. Donec ante elit, dapibus nec mi dignissim, gravida mollis erat. Mauris bibendum ex vulputate sapien bibendum, id porta sem dictum. Nulla tempus sodales leo sed semper. Integer fringilla quam metus, in bibendum dolor eleifend rhoncus. Ut sit amet augue ac lacus tincidunt congue in ac tellus. Integer blandit elit non arcu laoreet, in tristique elit ultrices. Cras feugiat tempus nisl, eu efficitur metus porta convallis.</p>
-					<p>Donec vel tincidunt ex. Morbi id mollis lectus. Integer urna urna, fermentum sit amet fermentum sit amet, hendrerit luctus nibh. Donec nec enim ut elit ornare varius eu sit amet tortor. Morbi eget tellus vitae turpis semper sollicitudin. Sed vel leo nibh. Vestibulum eu semper tortor. Sed feugiat ultricies justo, in gravida odio feugiat pharetra. Aenean suscipit leo a blandit efficitur. Pellentesque sit amet rutrum lorem. Sed vel luctus libero.</p>
-					<p>Ut eu molestie lectus. Donec tincidunt, velit vitae blandit molestie, sem nisi tristique sem, vitae lacinia lectus eros id magna. Suspendisse ultrices dui et orci eleifend varius. Nunc eu congue elit. Donec vulputate at ex sit amet pellentesque. Maecenas urna dui, condimentum at nulla at, malesuada consequat velit. Vestibulum vel dapibus nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet volutpat velit, ut feugiat mi. Pellentesque et iaculis nunc. Proin sapien erat, interdum vitae malesuada a, pretium nec odio.</p>
-					<p>Vestibulum sollicitudin, ipsum ut malesuada ultrices, odio sem dignissim justo, sed sollicitudin leo quam at nulla. Aliquam dapibus, mi non luctus convallis, lacus nisi suscipit dolor, sit amet cursus lacus elit vitae nisl. Nam vulputate blandit mi, quis rhoncus tortor mattis sit amet. Proin molestie felis ut ante pharetra ultrices. Fusce euismod aliquam ipsum, non tempor mauris vehicula eu. Mauris commodo vestibulum porta. Pellentesque egestas felis quis ante blandit, vel vehicula sem fermentum. Aenean molestie pellentesque ex, eu laoreet ante. Maecenas interdum, nibh nec egestas porttitor, metus nulla vulputate quam, sed blandit nisi ligula et lectus. Praesent lectus nisl, venenatis eu luctus id, consectetur viverra lorem. Etiam mollis, ligula eget maximus sagittis, purus leo aliquet sapien, quis consectetur risus est in tortor. Vivamus ac imperdiet dui.</p>
-				</div>
 			</section>
 		</content>
 	</body>
-	
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
@@ -86,18 +91,29 @@
 		function change_img(new_img){
 			$('.img-logo').attr('src', new_img);
 		}
-
+		function start_again(){
+			$('.img-module').show(500);
+			current_img = $('.img-logo').attr('src');
+			if(current_img != def_logo){
+				$('.img-logo').fadeTo('fast', 0, function(){
+					$('.img-logo').attr('src', def_logo);
+				});
+				$('#module-info').hide();
+				$('.img-logo').fadeTo('slow', 1);
+			}
+		}
 		$('#module-info').hide();
 		$('.viewport').height($(window).height());
 
 		$(document).ready(function(){
 			$('.img-module')
 				.mouseover(function(){
-					$('.img-module').parent().css('opacity', 0.1);
-					$(this).parent().css('opacity', 1);
+					//~ $('.img-module').parent().css('opacity', 0.1);
+					//~ $(this).parent().css('opacity', 1);
+					$(this).effect('bounce', {'times':1, 'distance':10}, 'fast');
 				})
 				.mouseout(function(){
-					$('.img-module').parent().css('opacity', 1);
+					//~ $('.img-module').parent().css('opacity', 1);
 				})
 				.click(function(){
 					$('.img-module').hide(500);
@@ -110,15 +126,11 @@
 				});
 			$('.img-logo')
 				.click(function(){
-					$('.img-module').show(500);
-					current_img = $('.img-logo').attr('src');
-					if(current_img != def_logo){
-						$('.img-logo').fadeTo('fast', 0, function(){
-							$('.img-logo').attr('src', def_logo);
-						});
-						$('#module-info').hide();
-						$('.img-logo').fadeTo('slow', 1);
-					}
+					start_again();
+				});
+			$('.fd_back')
+				.click(function(){
+					start_again();
 				});
 		});
 	</script>
