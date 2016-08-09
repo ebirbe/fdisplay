@@ -74,8 +74,9 @@
 			$('.img-logo').attr('src', new_img);
 		}
 		function start_again(){
-			$('.img-module').show(500);
-			$('#module-info').hide(500);
+			$('#module-info').hide('slide', {'direction': 'down'}, 'fast', function(){
+				$('.img-module').show('slide', {'direction': 'up'}, 'slow');
+			});
 		}
 		$('#module-info').hide();
 		$('.viewport').height($(window).height());
@@ -86,8 +87,9 @@
 					$(this).effect('bounce', {'times':1, 'distance':10}, 'slow');
 				})
 				.click(function(){
-					$('.img-module').hide(500);
-					$('#module-info').show(500);
+					$('.img-module').hide('slide', {'direction': 'down'}, 'fast', function(){
+						$('#module-info').show('slide', {'direction': 'down'}, 'slow');
+					});
 				});
 			$('.img-logo')
 				.click(function(){
