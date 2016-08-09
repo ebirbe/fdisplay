@@ -18,13 +18,28 @@ function change_img(new_img){
 }
 
 function start_again(){
-	$('#module-info').hide('slide', {'direction': 'down'}, 'fast', function(){
-		$('.img-module').show('slide', {'direction': 'up'}, 'slow');
-	});
+	modules.forEach(function(item, index){
+			$("#info_mod_" + item).not(":hidden")
+				.hide('slide', {'direction': 'down'}, 'fast', function(){
+					$('.img-module')
+						.show('slide', {'direction': 'up'}, 'slow');
+				});
+		});
 }
 
-$('#module-info').hide();
+function show_module_info(mod_name){
+	$('.img-module')
+		.hide('slide', {'direction': 'down'}, 'fast', function(){
+			$("#info_mod_" + mod_name)
+				.show('slide', {'direction': 'down'}, 'slow');
+		});
+}
+
+// Expand to the size of screen
 $('.viewport').height($(window).height());
+
+// Hide info div's
+$("div[id^='info_mod_']").hide();
 
 $(document).ready(function(){
 
@@ -33,9 +48,8 @@ $(document).ready(function(){
 			$(this).effect('bounce', {'times':1, 'distance':10}, 'slow');
 		})
 		.click(function(){
-			$('.img-module').hide('slide', {'direction': 'down'}, 'fast', function(){
-				$('#module-info').show('slide', {'direction': 'down'}, 'slow');
-			});
+			var mod_name = $(this).attr('id').replace('img_mod_', '');
+			show_module_info(mod_name);
 		});
 
 	$('.img-logo')
