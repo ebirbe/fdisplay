@@ -35,11 +35,11 @@
 				<!-- Diagram Row 1 -->
 				<div class="fd_row"></div>
 				<div class="row fd_row">
-					<div class="col-xs-2 col-xs-offset-1 "></div>
-					<div class="col-xs-2 "></div>
-					<div class="col-xs-2" ><img class="img-logo img-responsive center-block" src="img/odoomx.png" alt="Odoo L10n MX Modules"></div>
-					<div class="col-xs-2 "></div>
-					<div class="col-xs-2 "></div>
+					<div class="col-md-2 col-md-offset-1 "></div>
+					<div class="col-md-2 "></div>
+					<div class="col-md-2" ><img class="img-logo img-responsive center-block" src="img/odoomx.png" alt="Odoo L10n MX Modules"></div>
+					<div class="col-md-2 "></div>
+					<div class="col-md-2 "></div>
 				</div>
 				<div id="module-info" class="row fd_row">
 					<div class="col-md-6">
@@ -55,19 +55,15 @@
 				</div>
 				<!-- Diagram Row 2 -->
 				<div class="row fd_row">
-					<div class="col-xs-2 col-xs-offset-1 "><img id="sales" class="img-module img-responsive center-block" src="img/sales.png" alt="Sales"></div>
-					<div class="col-xs-2 "></div>
-					<div class="col-xs-2 "><img id="accounting" class="img-module img-responsive center-block" src="img/accounting.png" alt="Accounting"></div>
-					<div class="col-xs-2 "></div>
-					<div class="col-xs-2 "><img id="hr" class="img-module img-responsive center-block" src="img/hr.png" alt="Human Resources"></div>
+					<div class="col-md-4"><img id="sales" class="img-module img-responsive center-block" src="img/sales.jpg" alt="Sales"></div>
+					<div class="col-md-4"><img id="accounting" class="img-module img-responsive center-block" src="img/accounting.jpg" alt="Accounting"></div>
+					<div class="col-md-4"><img id="hr" class="img-module img-responsive center-block" src="img/hr.jpg" alt="Human Resources"></div>
 				</div>
 				<!-- Diagram Row 3 -->
 				<div class="row fd_row">
-					<div class="col-xs-2 col-xs-offset-1"><img id="documents" class="img-module img-responsive center-block" src="img/documents.png" alt="Documents"></div>
-					<div class="col-xs-2 "></div>
-					<div class="col-xs-2 "><img id="reports" class="img-module img-responsive center-block" src="img/reports.png" alt="Reports"></div>
-					<div class="col-xs-2 "></div>
-					<div class="col-xs-2 "><img id="warehouse" class="img-module img-responsive center-block" src="img/warehouse.png" alt="Warehouse"></div>
+					<div class="col-md-4"><img id="documents" class="img-module img-responsive center-block" src="img/documents.jpg" alt="Documents"></div>
+					<div class="col-md-4 "><img id="reports" class="img-module img-responsive center-block" src="img/reports.jpg" alt="Reports"></div>
+					<div class="col-md-4 "><img id="warehouse" class="img-module img-responsive center-block" src="img/warehouse.jpg" alt="Warehouse"></div>
 				</div>
 			</section>
 		</content>
@@ -93,14 +89,7 @@
 		}
 		function start_again(){
 			$('.img-module').show(500);
-			current_img = $('.img-logo').attr('src');
-			if(current_img != def_logo){
-				$('.img-logo').fadeTo('fast', 0, function(){
-					$('.img-logo').attr('src', def_logo);
-				});
-				$('#module-info').hide();
-				$('.img-logo').fadeTo('slow', 1);
-			}
+			$('#module-info').hide(500);
 		}
 		$('#module-info').hide();
 		$('.viewport').height($(window).height());
@@ -108,21 +97,11 @@
 		$(document).ready(function(){
 			$('.img-module')
 				.mouseover(function(){
-					//~ $('.img-module').parent().css('opacity', 0.1);
-					//~ $(this).parent().css('opacity', 1);
-					$(this).effect('bounce', {'times':1, 'distance':10}, 'fast');
-				})
-				.mouseout(function(){
-					//~ $('.img-module').parent().css('opacity', 1);
+					$(this).effect('bounce', {'times':1, 'distance':10}, 'slow');
 				})
 				.click(function(){
 					$('.img-module').hide(500);
-					$('#module-info').show();
-					var new_img = $(this).attr('src');
-					$('.img-logo').fadeTo('fast', 0, function(){
-						change_img(new_img);
-					});
-					$('.img-logo').fadeTo('slow', 1)
+					$('#module-info').show(500);
 				});
 			$('.img-logo')
 				.click(function(){
