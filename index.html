@@ -60,45 +60,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!-- JQuery UI -->
 	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-	<script type="text/javascript">
-		var modules = [
-			'sales',
-			'accounting',
-			'hr',
-			'documents',
-			'reports',
-			'warehouse'
-		];
-		var def_logo = 'img/odoomx.png';
-		function change_img(new_img){
-			$('.img-logo').attr('src', new_img);
-		}
-		function start_again(){
-			$('#module-info').hide('slide', {'direction': 'down'}, 'fast', function(){
-				$('.img-module').show('slide', {'direction': 'up'}, 'slow');
-			});
-		}
-		$('#module-info').hide();
-		$('.viewport').height($(window).height());
-
-		$(document).ready(function(){
-			$('.img-module')
-				.mouseover(function(){
-					$(this).effect('bounce', {'times':1, 'distance':10}, 'slow');
-				})
-				.click(function(){
-					$('.img-module').hide('slide', {'direction': 'down'}, 'fast', function(){
-						$('#module-info').show('slide', {'direction': 'down'}, 'slow');
-					});
-				});
-			$('.img-logo')
-				.click(function(){
-					start_again();
-				});
-			$('.fd_back')
-				.click(function(){
-					start_again();
-				});
-		});
-	</script>
+	<!-- FDisplay -->
+	<script src="js/fdisplay.js"></script>
 </html>
